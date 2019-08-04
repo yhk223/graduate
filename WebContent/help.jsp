@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="check_container" id="check_4"><h2 class="check_title">手机功能类检测</h2><div class="check_content"><div class="check_subtitle"><div class="check_point"></div><h3>WI-FI</h3></div><div class="check_subcontent"><p>检查是否有 WI-FI 功能。周围环境必须要有“热点”，即无线路由器能覆盖到的距离内才能测。必须注意的是，有的水货机虽带 WI-FI 模块，但还需装对应的补丁后才能上网。</p><img src="//sr.aihuishou.com/activity/pc/images/help/check/function_1.jpg" alt="功能1"></div></div><div class="check_content"><div class="check_subtitle"><div class="check_point"></div><h3>通话功能</h3></div><div class="check_subcontent"><p>拨打10086或者10000，转接人工通话，看是否能正常通话，并开启扩音功能看是否能正常通话，在通话过程中如出现通话断话，通话断续，无回音，听筒杂音等现象，视为通话功能不正常。在通话过程中调节音量键，看音量键是否正常，如果按键不能加减音量，则视为按键功能不正常。</p><img src="//sr.aihuishou.com/activity/pc/images/help/check/function_2.jpg" alt="功能1"></div></div><div class="check_content"><div class="check_subtitle"><div class="check_point"></div><h3>蓝牙功能</h3></div><div class="check_subcontent"><p>打开蓝牙，看是否能搜索到其他设备，不能搜索到其他设备视为蓝牙功能不正常。</p><img src="//sr.aihuishou.com/activity/pc/images/help/check/function_3.jpg" alt="功能3"></div></div><div class="check_content"><div class="check_subtitle"><div class="check_point"></div><h3>手机存储</h3></div><div class="check_subcontent"><p>找到手机存储卡选项，查看内存大小是否能都显示，不能显示，把内存拿下在装上，多试几次（换上个好的内存卡试试），如果还是不能显示大小，则为内存卡槽功能不正常。</p><img src="//sr.aihuishou.com/activity/pc/images/help/check/function_4.jpg" alt="功能4"></div></div><div class="check_content"><div class="check_subtitle"><div class="check_point"></div><h3>手机触屏</h3></div><div class="check_subcontent"><p>随便按住一个程序在屏幕每个地方拖行，只要不脱落就说明屏幕触摸是正常的。如果脱落就说明那块脱落的屏，触摸不正常。</p><img src="//sr.aihuishou.com/activity/pc/images/help/check/function_5.jpg" alt="功能5"></div></div></div></body>
+</html>

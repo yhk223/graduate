@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.Mobilemapper">
+	<select id="countAll" resultType="java.lang.Integer">
+		select
+		count(1) from Mobile
+	</select>
+	<select id="findAll" resultType="com.ssm.entity.Mobile">
+		select * from mobile limit
+		#{firstsize},#{maxsize}
+	</select>
+	<select id="listall" resultType="com.ssm.entity.Mobile">
+	select * from mobile
+	</select>
+	<select id="findById" parameterType="int"
+		resultType="com.ssm.entity.Mobile">
+		select * from mobile where mobileid=#{mobileid}
+	</select>
+	<select id="findBaseInfoByMobileid" parameterType="int"
+		resultType="com.ssm.entity.BaseInfo">
+		select * from BaseInfo where mobile_id=#{mobileid}
+	</select>
+	<select id="countMobileByBrankId" parameterType="int"
+		resultType="int">
+		select count(1) from Mobile where brandid=#{brandid}
+	</select>
+	<select id="findLike" parameterType="String"
+		resultType="com.ssm.entity.Mobile">
+		select * from mobile where userstyle like #{userstyle}
+	</select>
+	<select id="findfacedebyid" parameterType="int"
+		resultType="com.ssm.entity.Facade">
+		select * from facade where modileid=#{mobileid}
+	</select>
+	<select id="findfunbyid" parameterType="int"
+		resultType="com.ssm.entity.Function">
+		select * from function where mobile_id=#{mobileid}
+	</select>
+<!--	<select id="findiftsbybaseinfo" parameterType="int" resultType="com.ssm.entity.Baseinfomations">
+		select * from baseinfomations where baseId=#{baseid} 
+		<foreach collection=""></foreach>
+	</select>
+	!-->
+	<select id="findfacedeinfbybaseface" parameterType="int"
+		resultType="com.ssm.entity.FacadeInfomations">
+		select * from facadeinfomations where facadeid=#{facedeid}
+	</select>
+   <select id="findbaseidbybinf" parameterType="int" resultType="int">
+   select baseid from  baseinfo where mobile_id=#{mobileid}
+    </select>
+    
+ <select id="findiftsbybaseinfo" parameterType="int" resultType="com.ssm.entity.Baseinfomations">
+    select * from baseinfomations where baseId=#{baseId}
+</select> 
+    
+</mapper>

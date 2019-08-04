@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+  <!--   <bean id="userservice" class="org.ssm.service.ipml.userServiceimpl">
+		<property name="usermapper" ref="usermapper"></property>
+	</bean>
+  -->
+     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+     <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+     <property name="url" value="jdbc:mysql://localhost:3306/study"></property>
+     <property name="username" value="root"></property>
+     <property name="password" value="123"></property>
+     </bean>
+     
+     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+     <property name="dataSource" ref="dataSource"></property>
+     <property name="mapperLocations" value="classpath:com/ssm/mapper/*.xml"></property> 
+     </bean>
+     
+     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+     <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+     <property name="basePackage" value="com.ssm.mapper"></property>
+     </bean>
+     
+     <bean id="mobileService" class="com.ssm.service.impl.MobileService">
+     <property name="mobilemapper" ref="mobilemapper"></property>
+     </bean>
+     <bean id="userService" class="com.ssm.service.impl.UserService">
+     <property name="usermapper" ref="usermapper"></property>
+     </bean>
+     <bean id="categoryService" class="com.ssm.service.impl.CategoryService">
+     <property name="categorymapper" ref="categorymapper"></property>
+     </bean>
+     
+     <bean id="priceService" class="com.ssm.service.impl.PriceService">
+     <property name="pricemapper" ref="pricemapper"></property>
+     </bean>
+     <bean id="ordingService" class="com.ssm.service.impl.OrdingService">
+     <property name="ordingmapper" ref="ordingmapper"></property>
+     </bean>
+     
+</beans>
+
+

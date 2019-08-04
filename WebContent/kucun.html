@@ -1,0 +1,404 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>库存手机回收，企业商家库存手机回收-回购网，闲置数码产品回收</title>
+<meta name="baidu-site-verification" content="GOESNNTeBM" />
+<meta name="chinaz-site-verification" content="081e7651-48c6-4c2f-a569-99321685eab1" />
+<link href="favicon.ico" type=image/x-icon rel="Icon">
+<link href="css/new_css/global.css" rel="stylesheet" type="text/css">
+<script src="js/new_js/jquery-1.4.2.js" type="text/javascript"></script>
+<script src="js/new_js/new_public.js" type="text/javascript"></script>
+<script type="text/javascript">
+function selectcity(url){
+	open_div_extends('切换地区',url,'Loading_child');
+}
+</script>
+<link href="css/kc_css/index.css" rel="stylesheet" type="text/css">
+<!--<meta name="keywords" content="" />
+<meta name="description" content="库存机回收" />-->
+<script type="text/javascript">
+$(function(){
+ $('#add').click(function(){
+  var company = V('company','v');
+  if(!company){alert('请输入公司名称');return false;}
+  if(company.length>20){alert('输入的公司名称过长');return false;}
+  var link_name = V('link_name','v');
+  if(!link_name){alert('请输入联系名称');return false;}
+  if(link_name.length>20){alert('输入的联系名称过长');return false;}
+  var link_tel = V('link_tel','v');
+  if(!link_tel){alert('请输入联系电话');return false;}
+  if(link_tel.length>20){alert('输入的联系电话过长');return false;}
+  var user_note = V('user_note','v');
+  if(!user_note){alert('请输入备注说明');return false;}
+  if(user_note.length>300){alert('输入的备注说明过长');return false;}
+ 	$("#form1").attr('action',"kucun/add.html");
+	$('#add').attr('id','disabled');
+	$("#form1").submit();
+  
+ });
+});
+
+</script>
+</head>
+<body>
+<div id="pageContain" class="pageContain">
+  <div class="page page1 current">
+    <div class="contain">
+      <div class="wrap">
+               <link rel="stylesheet" type="text/css" href="css/alert_zhe.css" />
+<script type="text/javascript" src="js/alert_zhe.js"></script>
+<div id="Loading_child" class="Loading" style="display:none; height:480px;" onDblClick="ttt('Loading_child');">
+	 <div class="tyd_box">
+	  <div class="tyd_box_c">
+		<div class="tyd_box_title">
+			<span id="Loading_child_title"></span><a href="javascript:ttt('Loading_child')"><img src="images/close1.gif" border="0" /></a>
+		</div>
+		<div class="tyd_box_content" style="width:612px;overflow:auto; height:450px;">
+			<iframe id="Loading_child_iframe_id" name="iframe_id" width="612" height="450"  border="0" frameborder="0"></iframe>
+		</div>
+	  </div>
+	</div>
+</div>
+<div id="mbDIV" style="display:none;"></div>
+<!--头部-->
+
+<div class="shortcut">
+
+  <div class="page_box">
+
+    <div class="shortcut-left">
+
+      <ul>
+
+        <li class="item-more"><a href="javascript:void(0)"><span>&nbsp;</span><em>手机逛回购</em></a>
+
+          <div class="sub-nav">
+
+            <div><a href="http://m.ihuigo.com" target="_blank"><img src="images/new_images/shortcut_wx.gif" width="145" height="145" /></a></div>
+
+            <div>扫描进入手机站</div>
+          </div>
+
+        </li>
+
+        <li class="city" ><span>当前：
+
+        <span id="selectcity_new">
+
+          <script src="ajax/show_city.html" type="text/javascript" language="javascript"></script>
+
+        
+
+        </span>
+
+        <a href="javascript:void(0);" onClick="selectcity('/index/selectcity_new.html');">[切换城市]</a></span></li>
+
+      </ul>
+
+    </div>
+
+    <div class="shortcut-right">
+
+      <ul id='login_show'>
+
+      
+		  
+            <li><a href="members/login.html">登录</a></li>
+
+            <li><a href="members/register.html">注册</a></li>
+
+          
+        
+        <li class="item-daohang"><a class="item-daohang-nav" href="service/map.html">网站导航</a>
+
+              <div class="sub-nav2">
+
+             <ul>
+
+               <li>
+
+                 <dl>
+
+                   <dt>主要频道</dt>
+
+                   <dd><a target="_blank" href="goods.html">旧机回收</a></dd>
+
+                   <dd><a  target="_blank" href="youpin.html" >二手优品</a></dd>
+
+                   <dd><a style="display: none;" target="_blank" href="">以旧换新</a></dd>
+
+                   
+
+                 </dl>
+
+               </li>
+
+               <li>
+
+                 <dl>
+
+                   <dt>企业服务</dt>
+
+                   <dd><a target="_blank" href="service/joinus.html">企业代理</a></dd>
+
+                   <dd><a target="_blank" href="service/joinus.html">校园代理</a></dd>
+
+                 </dl>
+
+               </li>
+
+               <li>
+
+                 <dl>
+
+                   <dt>客户服务</dt>
+
+                   <dd style="display: none;"><a  target="_blank" href="">新手引导</a></dd>
+
+                   <dd><a target="_blank" href="service/terms.html">服务条款</a></dd>
+
+                   <dd><a target="_blank" href="service/suggestions.html">投诉建议</a></dd>
+
+                   <dd><a target="_blank" onClick="zixunserver('/index/zixunserver.html');" href="javascript:void(0)">在线客服</a></dd>
+
+                 </dl>
+
+               </li>
+
+               <div class="clear"></div>
+
+             </ul>
+
+            
+
+           </div>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
+
+</div>
+
+<div class="header">
+
+  <div class="page_box">
+
+    <h1 class="logo"><a href=""><img src="images/new_images/logo.png" width="171" height="43" /></a></h1>
+
+<!--    <h1 class="day"><a href="http://www.ihuigo.com/uploads/day/index.html" target="_blank"><img src="--><!--images/new_images/day.png" /></a></h1>-->
+
+      <div class="nav">
+          <a title="闲置二手手机回收估价" href="goods.html">
+              <!--<span id="nav_xz">&nbsp;</span>-->闲置回收</a>
+          <a title="二手手机以旧换新活动" href="huanxin.html"><!--<span id="nav_hx">&nbsp;</span>-->旧机换新<img src="images/new_images/new.png" /></a>
+          <a title="二手优品手机抢购" href="youpin.html"><!--<span id="nav_hx">&nbsp;</span>-->二手优品</a><a target="_blank" href="kucun.html" rel="nofollow" style="margin-right:0;"><img src="images/new_images/kc.gif" style="vertical-align:middle"></a>
+      </div>
+
+  </div>
+
+</div>
+
+<!--头部--> 
+        <div class="inner">
+      <div class="section_box1">
+        <div class="inner_img1"><img src="images/kc_images/img1.png"></div>
+        <div class="inner_img2"><img src="images/kc_images/img2.png"></div>
+        <div class="arrow_down"><img src="images/kc_images/arrow_down1.png"></div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="page page2">
+    <div class="contain">
+      <div class="wrap">
+      <div class="inner">
+     
+      <div class="section_box2">
+        <dl class="inner_list">
+          <dd class="inner_item1"><a href="###"><span>APP测试机</span><samp></samp></a></dd>
+          <dd class="inner_item2"><a href="###"><span>门店展示机</span><samp></samp></a></dd>
+          <dd class="inner_item3"><a href="###"><span>经销商库存机</span><samp></samp></a></dd>
+          <dd class="inner_item4"><a href="###"><span>电商退损机</span><samp></samp></a></dd>
+          <dd class="inner_item5"><a href="###"><span>批量缺损机</span><samp></samp></a></dd>
+        </dl>
+       <div class="nav"><ul class="arrow_down" id="nav_bar"><li><img src="images/kc_images/arrow_down2.png"></li></ul></div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="page page3">
+    <div class="contain">
+      <div class="wrap">
+         <div class="inner">
+         <script type="text/javascript">
+$(document).ready(function(){
+			$("#focus .input_txt").each(function(){
+					var thisVal=$(this).val();
+					//判断文本框的值是否为空，有值的情况就隐藏提示语，没有值就显示
+					if(thisVal!=""){
+							$(this).siblings("samp").hide();
+						}else{
+							$(this).siblings("samp").show();
+						}
+					//聚焦型输入框验证	
+					$(this).focus(function(){
+							$(this).siblings("samp").hide();
+						}).blur(function(){
+								var val=$(this).val();
+								if(val!=""){
+									$(this).siblings("samp").hide();
+								}else{
+									$(this).siblings("samp").show();
+								}	
+						});
+				})
+				$("#focus .textarea").each(function(){
+					var thisVal=$(this).val();
+					//判断文本框的值是否为空，有值的情况就隐藏提示语，没有值就显示
+					if(thisVal!=""){
+							$(this).siblings("samp").hide();
+						}else{
+							$(this).siblings("samp").show();
+						}
+						$(this).keyup(function(){
+							var val=$(this).val();
+							$(this).siblings("samp").hide();
+						}).blur(function(){
+								var val=$(this).val();
+								if(val!=""){
+									$(this).siblings("samp").hide();
+								}else{
+									$(this).siblings("samp").show();
+								}
+							})
+					})	
+		})
+</script>
+      <div class="section_box3">
+      <form method="post" id="form1">
+        <dl class="inner_input" id="focus">
+          <dd><samp>公司名称</samp>
+            <input type="text" name="company" maxlength="20" id="company" value="" class="input_txt">
+          </dd>
+          <dd><samp>联系人</samp>
+            <input type="text" name="link_name" maxlength="20" id="link_name" value="" class="input_txt">
+          </dd>
+          <dd class="inner_input_mar"><samp>联系电话</samp>
+            <input type="text" name="link_tel" maxlength="20" id="link_tel" value="" class="input_txt">
+          </dd>
+          <dd class="section_text"><samp>说明</samp>
+            <textarea maxlength="300" title="最多300个字"  style="max-width: 596px; max-height: 100px;" class="textarea" id="user_note" name="user_note"></textarea>
+          </dd>
+          <dt>
+           <input type="hidden" name="safe_code" value="8ea65fae499faa3347e51a6926b9e67d">
+            <input type="button" id="add" value="提交" class="input_btn">
+          </dt>
+        </dl>
+        </form>
+        <div class="inner_txt">客户经理将一对一为贵司报价回收</div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="nav" style="background:#f00">
+<ul id="navBar" class="menu">
+    <li data-menuanchor="page1" class="active"><a href="#page1" title=""><span>&nbsp;</span></a></li>
+	<li data-menuanchor="page2"><a href="#page2" title=""><span>&nbsp;</span></a></li>
+	<li data-menuanchor="page3"><a href="#page3" title=""><span>&nbsp;</span></a></li>
+
+</ul>
+</div>
+<div id="scrollpage">
+  <div class="section section1">
+    <div class="inner">
+      <div class="section_box1">
+        <div class="inner_img1"><img src="images/kc_images/img1.png"></div>
+        <div class="inner_img2"><img src="images/kc_images/img2.png"></div>
+        <div class="arrow_down"><a class="godown " href="#page2"><span><img src="images/kc_images/arrow_down1.png"></span></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="section section2">
+    <div class="inner">
+      <div class="section_box2">
+        <dl class="inner_list">
+          <dd class="inner_item1"><a href="###"><span>APP测试机</span><samp></samp></a></dd>
+          <dd class="inner_item2"><a href="###"><span>门店展示机</span><samp></samp></a></dd>
+          <dd class="inner_item3"><a href="###"><span>经销商库存机</span><samp></samp></a></dd>
+          <dd class="inner_item4"><a href="###"><span>电商退损机</span><samp></samp></a></dd>
+          <dd class="inner_item5"><a href="###"><span>批量缺损机</span><samp></samp></a></dd>
+        </dl>
+        <div class="arrow_down"><img src="images/kc_images/arrow_down2.png"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section section3">
+    <div class="inner">
+      <div class="section_box3">
+   
+        <dl class="inner_input">
+          <dd>
+            <input type="text" placeholder="公司名称" class="input_txt">
+          </dd>
+          <dd>
+            <input type="text" placeholder="联系人" class="input_txt">
+          </dd>
+          <dd class="inner_input_mar">
+            <input type="text" placeholder="联系电话" class="input_txt">
+          </dd>
+          <dt>
+            <input type="button" value="提交" class="input_btn">
+          </dt>
+        </dl>
+   
+        <div class="inner_txt">客户经理将一对一为贵司报价回收</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/kc_js/jquery.fullPage.min.js"></script> 
+<script>
+var runPage;
+runPage = new FullPage({
+	id: 'pageContain',
+	slideTime: 800,
+	effect: {
+		transform: {
+			translate: 'Y'
+		},
+		opacity: [0, 1]
+	},
+	mode: 'wheel, touch, nav:navBar',
+	easing: 'ease'
+});
+
+</script>
+
+<script>
+$(function(){
+	if($.browser.msie && $.browser.version < 10){
+		$('body').addClass('ltie10');
+	}
+	$.fn.fullpage({
+		slidesColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
+		anchors: ['page1', 'page2', 'page3'],
+		menu: '#nav_bar'
+	});
+});
+</script>
+
+</body>
+</html>
