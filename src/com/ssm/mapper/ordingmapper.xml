@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.Ordingmapper">
+     <select id="findCartByUserid" parameterType="int" resultType="com.ssm.entity.Cart">
+     select * from cart where userid=#{userid}
+     </select>
+     <delete id="deleteByCart" parameterType="int">
+      delete from cart where cartid=#{cartid}
+     </delete>
+     <insert id="saveOrding" parameterType="com.ssm.entity.Ording">
+      insert into ording(ordingid, address, alipayname, alpayaccount, bank, bankid, bankidname, creatTime,
+       description, fulladdress, homeTime, img, linkname, mobileprice,
+        mobilepwd, mobilestyle, phone, userid)values(#{ordingid},#{address},
+        #{alipayname},#{alpayaccount},#{bank},
+        #{bankid},#{bankidname},#{creatTime},#{description},#{fulladdress},#{homeTime},#{img},#{linkname},
+        #{mobileprice},#{mobilepwd},#{mobilestyle},#{phone},#{user.userid})
+     </insert>
+     
+      <select id="findOrdingByUserid" parameterType="int" resultType="com.ssm.entity.Ording">
+     select * from ording where userid=#{userid}
+     </select>
+</mapper>

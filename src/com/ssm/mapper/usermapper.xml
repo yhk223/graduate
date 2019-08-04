@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.Usermapper">
+	<select id="getAdminByCond" parameterType="com.ssm.entity.Admin" resultType="com.ssm.entity.Admin">
+		select a.* from admin a where 1=1
+		<if test="username != null and '' != username">
+			and a.username = #{username}
+		</if>
+		<if test="password != null and '' != password">
+			and a.password = #{password}
+		</if>
+		<if test="realname != null and '' != realname">
+			and a.realname = #{realname}
+		</if>
+		<if test="contact != null and '' != contact">
+			and a.contact = #{contact}
+		</if>
+	</select>
+     <select id="getAllUsers" resultType="com.ssm.entity.User">
+        select * from users
+     </select>
+	<select id="findByPhone" parameterType="String"
+		resultType="com.ssm.entity.User">
+		select * from users where phone=#{phone}
+	</select>
+	<insert id="save">
+		insert into users(phone,pwd,salt) values(#{phone},#{pwd},#{salt})
+	</insert>
+	<select id="findMobileByBrandId"
+		resultType="com.ssm.entity.Mobile">
+		select * from mobile where brandid=#{brandid}
+	</select>
+	<select id="findAllMobileByBrandId"
+		resultType="com.ssm.entity.Mobile">
+		select * from mobile where brandid=#{brandid}
+	</select>
+	<select id="findAllBrand" resultType="com.ssm.entity.Brand">
+		select * from brand
+	</select>
+	<select id="findBrandByCateid" parameterType="int"
+		resultType="com.ssm.entity.Brand">
+		select * from Brand where id=#{id}
+	</select>
+	
+	 <insert id="saveCart" parameterType="com.ssm.entity.Cart">
+		insert into cart(cartid, count, creattime, description, mobileimg, mobilestyle, price, userid)
+		values(#{cartid},#{count},#{creattime},#{description},#{mobileimg},#{mobilestyle},#{price},#{user.userid})
+	</insert>
+    <select id="findCartByUser" parameterType="int" resultType="com.ssm.entity.Cart">
+        select * from cart where userid=#{userid}
+    </select>
+    <select id="findcommon" resultType="com.ssm.entity.lbmessages">
+    select * from lbmessages order by id desc
+    </select>
+    <update id="changepasswordbyid">
+      update users set pwd=#{pwd},salt=#{salt} where userid=#{userid}
+    </update>
+   <select id="querypwd" parameterType="int"
+		resultType="com.ssm.entity.User">
+		select * from users where userid=#{userid}
+	</select>
+	<delete id="deleteUsers" parameterType="int">
+	delete  from users where userid=#{userid}
+	</delete>
+	<delete id="deleteOrders" parameterType="int">
+	delete from ording where ordingid=#{ordingid}
+	</delete>
+	<select id="getAllOrders" resultType="com.ssm.entity.Ording">
+	select * from ording
+	</select>
+	<insert id="insertGoods" parameterType="com.ssm.entity.Mobile">
+	insert into mobile(mobileid, mobileimg, userstyle,price)
+		values(#{mobileid},#{mobileimg},#{userstyle},#{price})
+	</insert>
+	<delete id="deleteGoods" parameterType="int">
+	delete from mobile where mobileid=#{id}
+	</delete>
+	<insert id="insertAdmin" parameterType="com.ssm.entity.Admin">
+	insert into admin(adminid, username, password, realname, contact)values(#{adminid}, #{username}, #{password}, #{realname}, #{contact})
+	</insert>
+</mapper>
